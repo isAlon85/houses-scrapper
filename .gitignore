@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+.installed.cfg
+MANIFEST
+
+# Entornos virtuales
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Instalaciones y dependencias
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+
+# Output del scraper
+*.csv
+*.json
+*.xlsx
+*.xls
+idealista_*.txt
+
+# Selenium / ChromeDriver
+chromedriver
+chromedriver.exe
+geckodriver
+geckodriver.exe
+undetected_chromedriver/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Nuitka
+*.build/
+*.dist/
+*.onefile-build/
+nuitka-crash-report.xml
+
+# PyInstaller
+*.spec
+*.manifest
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
