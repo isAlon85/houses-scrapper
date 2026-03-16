@@ -11,10 +11,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 BASE_URL = "https://www.idealista.com/venta-viviendas/majadahonda-madrid/"
 
-# Pausa mínima y máxima en segundos entre páginas
 DELAY_MIN = 60
 DELAY_MAX = 80
-
+RESULTS_PER_PAGE = 30
+MIN_PRICE = 50000
+MAX_PRICE = 700000
 
 def get_driver():
     options = uc.ChromeOptions()
@@ -32,7 +33,7 @@ def get_driver():
     return driver
 
 
-def get_total_pages(driver, results_per_page=30):
+def get_total_pages(driver, results_per_page=RESULTS_PER_PAGE):
     """
     Detecta el número total de páginas extrayendo el total de inmuebles
     del h1 y dividiendo entre results_per_page.
@@ -179,7 +180,7 @@ def parse_price(price_str):
         return None
 
 
-def filter_properties(properties, min_price=50000, max_price=700000):
+def filter_properties(properties, min_price=MIN_PRICE, max_price=MAX_PRICE):
     """
     Filtra propiedades:
     - Excluye las que tienen title o price en N/A
