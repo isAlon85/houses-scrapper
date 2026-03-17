@@ -1,4 +1,4 @@
-content = '''# Scrapers de viviendas en Majadahonda
+# Scrapers de viviendas en Majadahonda
 
 Repositorio con varios scripts de web scraping para obtener viviendas en venta en Majadahonda desde distintos portales inmobiliarios: **Fotocasa**, **Idealista**, **Pisos.com** y **Habitaclia**.
 
