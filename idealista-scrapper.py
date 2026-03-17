@@ -319,8 +319,16 @@ def main():
 
     finally:
         try:
+            driver.service.stop()
+        except Exception:
+            pass
+        try:
+            # Evitar el OSError del __del__ de undetected-chromedriver
+            driver.keep_alive = False
             driver.quit()
-        except:
+        except OSError:
+            pass
+        except Exception:
             pass
 
 
